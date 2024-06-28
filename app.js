@@ -1,75 +1,105 @@
-// let obj = {
-//     s_id : " : 01" ,
-//     s_name : " : Javeria",
-//     s_age : " : 20",
-//     s_roll : " : GCS1-Cm-E0124sc",
-//     s_depart : " : IT",
-// }
+/*we create simple objects */
 
-// document.write(obj)  //  ye print nh hga
-// console.log(obj)  // ye console pe print hjaega bt console t hta hi rough work h
+/*let obj = {
+    id : " : 01" ,
+    name : " : Javeria",
+    age : " : 20",
+    roll : " : GCS1-Cm-E0124sc",
+    depart : " : IT",
+}*/
 
-// document.write(obj.s_age)  // ab ye thk treeqa h lkn us wqt jb hmn koi ek hi  value print
-// krni ho yni jsee hm ( arr[4] ) array ko index se get kre th isi trhn ise key se get krte hn 
-// document.write(obj.s_name)  
+/*we print obj in console */
+// console.log(obj)
+/*obj keys printing */
+// console.log(obj.name)
 
-// lkn ab bt aati h oosi array ki trhn k agr hmn pura array print krwna h t hm kia ek ek krke
-// krwaenge nh na islye is kaam k lye loop hte hn ab object ko print krne k lye forIn ka loop
-// hta h. acha ab yhn ek confusion h wo ye k jb hm srf key lkh k print krwaenge tb t uski key hi
-//  print hgi lkn jb hm obj[key] lkhnge tbkey print nh hgi blke us key ki value print hgi:
+/*replace obj key */
+// obj.name = "aliza"
+// console.log(obj)
+// console.log(obj.name)
 
-// for(var key in obj) {
-//     document.write(key, '<br>')
-// }
+/*obj loop */
 
-// ab iski value print hgi:
+/*for(let key in obj) {
+    console.log(`${key} : ${obj[key]}`)
+}*/
 
-// for(var key in obj) {
-//     document.write(obj[key] , '<br>')
-// }
+/*another object inside an object */
 
-// ab jb srf akela key lkha h tb t uski key print hgi lkn jb obj k sth sq braces mn key lkha h
-// tb us key ki value print hgi:
+/*let obj = {
+    fname : "javeria",
+    lname : "farooq",
+    living : {
+        city: "karachi",
+        country : "pakistan"
+    }
+}
 
-// for(var key in obj) {
-//     document.write(key, obj[key], '<br>')
-// }
+console.log(obj)
+console.log(obj["fname"])
+console.log(obj.fname)*/
+
+/**obj literals (means we create object properties from variables)*/
+
+/*let firstName = "javeria"
+let lastName = " farooq"
+let age = 20
+let course = "web development"
+
+let student = {
+    firstName,
+    lastName,
+    age,
+    course
+}
+
+console.log(student)
+
+for(let key in student) {
+    console.log(`${key} : ${student[key]}`)
+}*/
+
+/*obj with array and function */
+
+/*let obj = {
+    age : '20',
+    rollNo: '133517',
+    arr : ['javeria ', 'farooq ', 'intermediate'],
+    course : "web development",
+    dressPayment : function () {
+        return 2000
+    }
+}
+
+for(let key in obj) {
+    if(key === "arr") {
+        console.log("enter array")
+        for(let i = 0; i < obj[key].length; i++) {
+            console.log(obj[key][i])
+        }
+        console.log("exit array")
+    }
+
+    else if(key === "dressPayment") {
+        document.write(obj[key]())
+    }
+
+    else{
+        console.log(`${key} : ${obj[key]}`)
+    }
+}
+console.log(obj)
 
 
+for(var key in obj) {
+    document.write(key, ' : ', obj[key], '<br>')
+    for (var i = 0; i < obj.arr.length; i++) {
+    document.write(obj.arr[i], '<br>')
+    }
+}*/
 
+//object.values
 
-// let myObj = {
-//     name: 'Javeria',
-//     fName: 'Farooq',
-//     class: '12',
-//     rollNo: '500072',
-//     totalMarks: '100',
-//     obtMarks: '95',
-//     per: '95%'
-// }
-
-// document.write(myObj)
-// console.log(myObj)
-
-// lkn ab mn chah rh hn k mujhe console pe ye data print nh krna blke document pe krna h or document pe ye ho nh rh t
-// ab iska treeqa kia h. iska treeqa ye h k hmare ps ek loop hta h jo srf or srf object k lye hi bna h or isilye bna h
-// k ye msla solve ho ske or wo loop h forIn ka loop. iske lgane ka treeqa ye h k hm phle for lkhte hn then round
-// brackets mn var lkh k direct jo variable bnana hta h bs uska name lkh dte hn na t equals to aata h or na hi us var
-// mn koi value assign krte hn bs srf or srf var lkh k variable ka name lkh dte hn t ye variable bn jta h ab hmne jo
-// var bnaya h hm oose kahenge k oo bne we variable undr jao undr bjne k lye hm in lgaenge ab kske undr jna h t zhr h
-// mne jo obj bnaya h us obj ka name lkhngi phr whi loop k lye curly braces mn jaake document pe print krwaoungi ab
-// print krwne ka treeqa kia h t print krwne ka treeqa whi h jo hm array mn krte th k doc.write krke array ka name
-// lkha phr square braces mn whn hm index k var ka name lkhte th yhn bh hmne jo loop k undr var bnaya h uska name lkhn
-// ge r kaam hjaega. or obj ki keys jo hngi wo maybe show hn islye wo sahi lkhni pregi. or jb mujhe akela obj print krna
-// hga t mn doc.write krke obj ka name lkh k .then uski jo key print krwni h us key ka name lkhngi js trhn loop mn bh
-// mne key ka name lkha th t key mn assign hwi v values print hwi th isi trhn jb akele mn .keyName lkhngi t us key
-// mn assign hwi v value aayegi.
-
-// for (var key in myObj) {
-//     document.write(key, ' : ', myObj[key], '<br>')
-// }
-
-// rough work:
-// localStorage.clear()
-// localStorage.setItem("firstName : ", "Javeria")
-// sessionStorage.setItem('lastName : ' , 'Farooq')
+/*let objValues = Object.values(obj)
+document.write(objValues)
+document.write(Object.values(obj.arr))*/
